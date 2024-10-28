@@ -49,13 +49,17 @@ echo "CONFIG_PACKAGE_jq=y" >> ./.config
 # 简单明了的系统资源占用查看工具
 echo "CONFIG_PACKAGE_btop=y" >> ./.config
 # 多网盘存储
-# echo "CONFIG_PACKAGE_luci-app-alist=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-app-linkease=y" >> ./.config
 # 强大的工具(需要添加源或git clone)
 # echo "CONFIG_PACKAGE_luci-app-lucky=y" >> ./.config
 # 网络通信工具
 echo "CONFIG_PACKAGE_curl=y" >> ./.config
 # CPU 性能优化调节设置
-# echo "CONFIG_PACKAGE_luci-app-cpufreq=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-app-cpufreq=y" >> ./.config
+# 释放内存
+echo "CONFIG_PACKAGE_luci-app-ramfree=y" >> ./.config
+# 解锁网易云灰色歌曲
+echo "CONFIG_PACKAGE_luci-app-unblockmusic=y" >> ./.config
 # 图形化流量监控
 # echo "CONFIG_PACKAGE_luci-app-wrtbwmon=y" >> ./.config
 # bbr加速+turboacc
