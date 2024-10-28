@@ -71,6 +71,18 @@ echo "CONFIG_PACKAGE_luci-app-unblockmusic=y" >> ./.config
 # echo "CONFIG_PACKAGE_kmod-sched-cake=y" >> ./.config
 echo "CONFIG_PACKAGE_kmod-tcp-bbr=y" >> ./.config
 echo "CONFIG_DEFAULT_tcp_bbr=y" >> ./.config
+# KMS 服务器
+echo "CONFIG_PACKAGE_luci-app-vlmcsd=y" >> ./.config
+#微信推送
+echo "CONFIG_PACKAGE_luci-app-serverchan=y" >> ./.config
+#百度网盘加速
+echo "CONFIG_PACKAGE_luci-app-baidupcs-web=y" >> ./.config
+#BT下载
+echo "CONFIG_PACKAGE_luci-app-qbittorrent=y" >> ./.config
+#蒲公英智能组网
+echo "CONFIG_PACKAGE_luci-app-pgyvpn=y" >> ./.config
+#FTP 服务器
+echo "CONFIG_PACKAGE_luci-app-vsftpd=y" >> ./.config
 # docker(只能集成)
 # echo "CONFIG_PACKAGE_luci-app-dockerman=y" >> ./.config
 
