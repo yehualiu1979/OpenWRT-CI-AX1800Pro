@@ -148,8 +148,8 @@ jobs:
       - name: Update Feeds
         run: |
           cd ./wrt/
-          echo "src-git packages https://git.openwrt.org/feed/packages" >> ./feeds.conf.default
-          echo "src-git luci https://git.openwrt.org/project/luci" >> ./feeds.conf.default
+          echo "src-git open-packages https://git.openwrt.org/feed/packages.git" >> ./feeds.conf.default
+          echo "src-git open-luci https://git.openwrt.org/project/luci.git" >> ./feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
