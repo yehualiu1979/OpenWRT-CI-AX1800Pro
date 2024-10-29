@@ -51,7 +51,7 @@ echo "CONFIG_PACKAGE_btop=y" >> ./.config
 # 多网盘存储
 echo "CONFIG_PACKAGE_luci-app-linkease=y" >> ./.config
 # KMS 服务器
-echo "CONFIG_PACKAGE_luci-app-vlmcsd=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-vlmcsd=y" >> ./.config
 #微信推送
 echo "CONFIG_PACKAGE_luci-app-serverchan=y" >> ./.config
 #百度网盘加速
