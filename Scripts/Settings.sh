@@ -71,7 +71,7 @@ echo "CONFIG_PACKAGE_luci-app-cpufreq=y" >> ./.config
 # 释放内存
 echo "CONFIG_PACKAGE_luci-app-ramfree=y" >> ./.config
 # 解锁网易云灰色歌曲
-# echo "CONFIG_PACKAGE_luci-app-unblockmusic=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-app-unblockmusic=y" >> ./.config
 # 图形化流量监控
 # echo "CONFIG_PACKAGE_luci-app-wrtbwmon=y" >> ./.config
 # bbr加速+turboacc
