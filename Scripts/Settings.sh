@@ -53,7 +53,7 @@ echo "CONFIG_PACKAGE_luci-app-alist=y" >> ./.config
 # KMS 服务器
 # echo "CONFIG_PACKAGE_luci-app-vlmcsd=y" >> ./.config
 #定时重启
-# echo "CONFIG_PACKAGE_luci-app-autoreboot=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-app-autoreboot=y" >> ./.config
 #百度网盘加速
 # echo "CONFIG_PACKAGE_luci-app-baidupcs-web=y" >> ./.config
 #aria2下载
@@ -61,7 +61,7 @@ echo "CONFIG_PACKAGE_luci-app-aria2=y" >> ./.config
 #qbittorrent下载
 echo "CONFIG_PACKAGE_luci-app-qbittorrent=y" >> ./.config
 #FTP 服务器
-# echo "CONFIG_PACKAGE_luci-app-vsftpd=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-app-vsftpd=y" >> ./.config
 # 强大的工具(需要添加源或git clone)
 # echo "CONFIG_PACKAGE_luci-app-lucky=y" >> ./.config
 # 网络通信工具
