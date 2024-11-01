@@ -49,19 +49,19 @@ echo "CONFIG_PACKAGE_jq=y" >> ./.config
 # 简单明了的系统资源占用查看工具
 echo "CONFIG_PACKAGE_btop=y" >> ./.config
 # 多网盘存储
-echo "CONFIG_PACKAGE_luci-app-linkease=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-app-alist=y" >> ./.config
 # KMS 服务器
 # echo "CONFIG_PACKAGE_luci-app-vlmcsd=y" >> ./.config
-#微信推送
-echo "CONFIG_PACKAGE_luci-app-serverchan=y" >> ./.config
+#定时重启
+# echo "CONFIG_PACKAGE_luci-app-autoreboot=y" >> ./.config
 #百度网盘加速
-echo "CONFIG_PACKAGE_luci-app-baidupcs-web=y" >> ./.config
-#BT下载
+# echo "CONFIG_PACKAGE_luci-app-baidupcs-web=y" >> ./.config
+#aria2下载
+echo "CONFIG_PACKAGE_luci-app-aria2=y" >> ./.config
+#qbittorrent下载
 echo "CONFIG_PACKAGE_luci-app-qbittorrent=y" >> ./.config
-#蒲公英智能组网
-echo "CONFIG_PACKAGE_luci-app-pgyvpn=y" >> ./.config
 #FTP 服务器
-echo "CONFIG_PACKAGE_luci-app-vsftpd=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-vsftpd=y" >> ./.config
 # 强大的工具(需要添加源或git clone)
 # echo "CONFIG_PACKAGE_luci-app-lucky=y" >> ./.config
 # 网络通信工具
@@ -71,7 +71,7 @@ echo "CONFIG_PACKAGE_luci-app-cpufreq=y" >> ./.config
 # 释放内存
 echo "CONFIG_PACKAGE_luci-app-ramfree=y" >> ./.config
 # 解锁网易云灰色歌曲
-echo "CONFIG_PACKAGE_luci-app-unblockmusic=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-unblockmusic=y" >> ./.config
 # 图形化流量监控
 # echo "CONFIG_PACKAGE_luci-app-wrtbwmon=y" >> ./.config
 # bbr加速+turboacc
