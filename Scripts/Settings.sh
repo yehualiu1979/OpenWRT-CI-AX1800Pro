@@ -51,7 +51,8 @@ echo "CONFIG_PACKAGE_btop=y" >> ./.config
 # 多网盘存储
 echo "CONFIG_PACKAGE_luci-app-alist=y" >> ./.config
 # KMS 服务器
-# echo "CONFIG_PACKAGE_luci-app-vlmcsd=y" >> ./.config
+echo "CONFIG_PACKAGE_vlmcsd=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-app-vlmcsd=y" >> ./.config
 #定时重启
 echo "CONFIG_PACKAGE_luci-app-autoreboot=y" >> ./.config
 #百度网盘加速
