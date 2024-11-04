@@ -51,7 +51,7 @@ echo "CONFIG_PACKAGE_btop=y" >> ./.config
 # 多网盘存储
 echo "CONFIG_PACKAGE_luci-app-alist=y" >> ./.config
 # passwall
-echo "CONFIG_PACKAGE_luci-app-passwall=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-passwall=y" >> ./.config
 # KMS 服务器
 # echo "CONFIG_PACKAGE_vlmcsd=y" >> ./.config
 # echo "CONFIG_PACKAGE_luci-app-vlmcsd=y" >> ./.config
