@@ -62,7 +62,7 @@ echo "CONFIG_PACKAGE_luci-app-autoreboot=y" >> ./.config
 #aria2下载
 echo "CONFIG_PACKAGE_luci-app-aria2=y" >> ./.config
 #qbittorrent下载
-echo "CONFIG_PACKAGE_luci-app-qbittorrent=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-qbittorrent=y" >> ./.config
 #FTP 服务器
 echo "CONFIG_PACKAGE_luci-app-vsftpd=y" >> ./.config
 # 强大的工具(需要添加源或git clone)
