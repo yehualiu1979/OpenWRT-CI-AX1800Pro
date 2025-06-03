@@ -268,9 +268,9 @@ jobs:
               # 生产的固件命名规则
               # 变量名	         	    示例值	                                            说明
               # $WRT_VER	     immortalwrt.git-main	                              源码版本标识
-              # $NAME	         qualcommax-jdcloud_re-ss-01-squashfs-sysupgrade	  设备+固件类型
-              # $WRT_DATE	     25.06.03_22.12.19                                 	日期时间戳
-              # $EXT           bin	                                              文件扩展名
+              # $NAME	         qualcommax-jdcloud_re-ss-01-squashfs-sysupgrade	    设备+固件类型
+              # $WRT_DATE	     25.06.03_22.12.19                                     	日期时间戳
+              # $EXT           bin	                                                文件扩展名
 
               # 原始设置
               # NEW_FILE="$WRT_VER"_"$NAME"_"$WRT_DATE"."$EXT"
