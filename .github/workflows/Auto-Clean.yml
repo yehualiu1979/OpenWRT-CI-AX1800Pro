@@ -5,7 +5,7 @@ on:
   #  schedule:
   #   - cron: 0 22 2-30/2 * *
     schedule:
-    - cron: 0 22 * * *
+     cron: 0 22 * * *
       
   # 手动清理
   workflow_dispatch:
