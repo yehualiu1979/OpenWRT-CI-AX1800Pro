@@ -23,7 +23,9 @@ jobs:
         with:
           gh_token: ${{secrets.GITHUB_TOKEN}}
           delete_releases: true
-          releases_keep_latest: ${{inputs.NUMBER || '0'}}
+          # releases_keep_latest: ${{inputs.NUMBER || '0'}}
+          # 保留最新30个
+          releases_keep_latest: ${{ inputs.retain_count || 30 }}
           delete_tags: true
           delete_workflows: true
           workflows_keep_day: 0
