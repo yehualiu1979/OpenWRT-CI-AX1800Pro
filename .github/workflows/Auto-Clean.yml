@@ -4,8 +4,7 @@ on:
   # 自动清理：每天早上6点
   #  schedule:
   #   - cron: 0 22 2-30/2 * *
-    schedule:
-     cron: 0 22 * * *
+
       
   # 手动清理
   workflow_dispatch:
