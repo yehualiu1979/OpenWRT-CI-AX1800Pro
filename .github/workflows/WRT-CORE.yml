@@ -273,9 +273,9 @@ jobs:
               # $EXT                   bin	                                                文件扩展名
 
               # 原始设置
-              # NEW_FILE="$WRT_VER"_"$NAME"_"$WRT_DATE"."$EXT"
+              NEW_FILE="$WRT_VER"_"$NAME"_"$WRT_DATE"."$EXT"
               # 自定义设置
-              NEW_FILE="JDax1800pro_$WRT_DATE.$EXT"
+              # NEW_FILE="JDax1800pro_$WRT_DATE.$EXT"
               
               mv -f $FILE ./upload/$NEW_FILE
             done
