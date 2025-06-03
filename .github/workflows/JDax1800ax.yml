@@ -8,11 +8,11 @@ on:
      workflows: ["Auto-Clean"]
      types:
        - completed
-  #自动编译：每天早上6点
+   #自动编译：每天早上6点
   #schedule:
   #  - cron: 0 22 * * *
   #手动编译
-  workflow_dispatch:
+   workflow_dispatch:
     inputs:
       PACKAGE:
         description: '手动调整插件包，多个请用\n符号隔开。'
