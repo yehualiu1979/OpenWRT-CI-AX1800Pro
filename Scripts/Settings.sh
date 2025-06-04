@@ -98,7 +98,7 @@ echo "CONFIG_PACKAGE_curl=y" >> ./.config
 # CPU 性能优化调节设置
 echo "CONFIG_PACKAGE_luci-app-cpufreq=y" >> ./.config
 # Windows激活
-echo "CONFIG_PACKAGE_luci-app-vlmcsd=y" >> ./.config
+#echo "CONFIG_PACKAGE_luci-app-vlmcsd=y" >> ./.config
 # 图形化流量监控
 # echo "CONFIG_PACKAGE_luci-app-wrtbwmon=y" >> ./.config
 # turboacc
