@@ -90,13 +90,13 @@ echo "CONFIG_PACKAGE_luci-app-watchcat=y" >> ./.config
 # 下载工具
 echo "CONFIG_PACKAGE_luci-app-aria2=y" >> ./.config
 # 广告屏蔽大师Plus
-echo "CONFIG_PACKAGE_luci-app-adbyby-plus=y" >> ./.config 
+# echo "CONFIG_PACKAGE_luci-app-adbyby-plus=y" >> ./.config 
 # 强大的工具(需要添加源或git clone)
 # echo "CONFIG_PACKAGE_luci-app-lucky=y" >> ./.config
 # 网络通信工具
 echo "CONFIG_PACKAGE_curl=y" >> ./.config
 # CPU 性能优化调节设置
-# echo "CONFIG_PACKAGE_luci-app-cpufreq=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-app-cpufreq=y" >> ./.config
 # 图形化流量监控
 # echo "CONFIG_PACKAGE_luci-app-wrtbwmon=y" >> ./.config
 # turboacc
