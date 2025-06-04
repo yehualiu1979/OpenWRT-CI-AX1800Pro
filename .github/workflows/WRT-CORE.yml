@@ -291,7 +291,7 @@ jobs:
           tag_name: ${{env.WRT_CONFIG}}_${{env.WRT_VER}}_${{env.WRT_DATE}}
           files: ./wrt/upload/*.*
           body: |
-            这是个平台固件包，内含多个设备！
+            这是京东AX1800pro专用固件！
             请注意选择你需要的设备固件！
             不要问，刷就完事了！
 
