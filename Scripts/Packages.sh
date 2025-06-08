@@ -147,3 +147,10 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages natter2 luci-app-
 wget "https://alist4.lovelyy.eu.org/d/CloudFlareR2/immortalwrt/nginx/ngnx.conf?sign=FN_uiyymuja-Aj1z4I4Pevn3arIZXBdslq8Zjd_akdo=:0" -O ../feeds/packages/net/nginx-util/files/nginx.config
 # echo 检测一下nginx的配置文件
 # cat ../feeds/packages/net/nginx-util/files/nginx.config
+
+# package/network/services/dnsmasq/files/dhcp.conf
+sed -i '/^\s*option\s\+min_cache_ttl\s\+/s/^/#/' ../feeds/package/network/services/dnsmasq/files/dhcp.conf
+sed -i '/^\s*option\s\+use_stale_cache\s\+/s/^/#/' ../feeds/package/network/services/dnsmasq/files/dhcp.conf
+
+# 检查是更改正确了
+grep -E 'min_cache_ttl|use_stale_cache' ../feeds/package/network/services/dnsmasq/files/dhcp.conf
