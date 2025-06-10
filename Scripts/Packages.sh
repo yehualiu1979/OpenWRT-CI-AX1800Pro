@@ -154,4 +154,4 @@ wget "https://alist4.lovelyy.eu.org/d/CloudFlareR2/immortalwrt/nginx/ngnx.conf?s
 find .. -name dhcp.conf
 
 # 检查是更改正确了
-grep -E 'min_cache_ttl|use_stale_cache' ../feeds/package/network/services/dnsmasq/files/dhcp.conf
+# grep -E 'min_cache_ttl|use_stale_cache' ../feeds/package/network/services/dnsmasq/files/dhcp.conf
