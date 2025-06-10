@@ -150,9 +150,10 @@ wget "https://alist4.lovelyy.eu.org/d/CloudFlareR2/immortalwrt/nginx/ngnx.conf?s
 # echo 检测一下nginx的配置文件
 # cat ../feeds/packages/net/nginx-util/files/nginx.config
 
+注释上游修改最小TTL和默认TTL为3600 现在根据上游DNS获取到的
 # package/network/services/dnsmasq/files/dhcp.conf
-# sed -i '/^\s*option\s\+min_cache_ttl\s\+/s/^/#/' ../package/network/services/dnsmasq/files/dhcp.conf
-# sed -i '/^\s*option\s\+use_stale_cache\s\+/s/^/#/' ../package/network/services/dnsmasq/files/dhcp.conf
+sed -i '/^\s*option\s\+min_cache_ttl\s\+/s/^/#/' ../package/network/services/dnsmasq/files/dhcp.conf
+sed -i '/^\s*option\s\+use_stale_cache\s\+/s/^/#/' ../package/network/services/dnsmasq/files/dhcp.conf
 # find .. -name dhcp.conf
 
 # 检查是更改正确了
