@@ -108,6 +108,29 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y clang llvm
 
+ # 移除现有有问题的LLVM仓库
+         sudo rm /etc/apt/sources.list.d/llvm-toolchain-*.list
+# 添加正确的LLVM仓库（使用版本18）
+         sudo bash -c 'echo "deb https://apt.llvm.org/noble/ llvm-toolchain-noble-18 main" > /etc/apt/sources.list.d/llvm-toolchain-noble-18.list'
+# 添加仓库签名密钥
+         wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | sudo tee /etc/apt/trusted.gpg.d/apt_llvm_org.asc
+# 更新软件列表
+         sudo apt-get update
+# 安装LLVM 18和Clang 18
+         sudo apt-get install -y clang-18 llvm-18
+# 设置默认版本
+         sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-18 100
+         sudo update-alternatives --install /usr/bin/llvm-config llvm-config /usr/bin/llvm-config-18 100
+# 修复依赖关系
+         sudo apt-get -f install
+# 检查安装结果
+         clang --version
+        # 应显示18.x版本
+         llvm-config --version
+        # 应显示18.x版本
+
+
+
       - name: Combine Disks(合并磁盘)
         uses: easimon/maximize-build-space@master
         with:
