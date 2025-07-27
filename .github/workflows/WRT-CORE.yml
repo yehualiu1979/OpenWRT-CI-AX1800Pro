@@ -101,12 +101,12 @@ jobs:
 
       - name: Install latest Clang/LLVM(安装最新的 LLVM/Clang)
         run: |
-          sudo apt-get update
-          sudo apt-get install -y lsb-release wget software-properties-common gnupg
-          wget -qO - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-          echo "deb http://apt.llvm.org/$(lsb_release -sc)/ llvm-toolchain-$(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/llvm.list
-          sudo apt-get update
-          sudo apt-get install -y clang llvm
+      #    sudo apt-get update
+      #    sudo apt-get install -y lsb-release wget software-properties-common gnupg
+      #    wget -qO - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+      #    echo "deb http://apt.llvm.org/$(lsb_release -sc)/ llvm-toolchain-$(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/llvm.list
+      #    sudo apt-get update
+      #    sudo apt-get install -y clang llvm
 
           # 添加正确的LLVM仓库（使用版本18）
           sudo bash -c 'echo "deb https://apt.llvm.org/noble/ llvm-toolchain-noble-18 main" > /etc/apt/sources.list.d/llvm-toolchain-noble-18.list'
