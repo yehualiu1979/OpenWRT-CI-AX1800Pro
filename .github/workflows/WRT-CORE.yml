@@ -240,8 +240,8 @@ jobs:
         run: |
           cd ./wrt/
 
-          #make -j$(nproc) || make -j$(nproc) V=s
-          make -j1 || make -j1 V=sc
+          make -j$(nproc) || make -j$(nproc) V=s
+          #make -j1 || make -j1 V=sc
 
       - name: Machine Information(机器信息)
         run: |
