@@ -82,7 +82,7 @@ echo "CONFIG_PACKAGE_jq=y" >> ./.config
 # 简单明了的系统资源占用查看工具
 echo "CONFIG_PACKAGE_btop=y" >> ./.config
 # 多网盘存储
-echo "CONFIG_PACKAGE_luci-app-alist=y" >> ./.config
+#echo "CONFIG_PACKAGE_luci-app-alist=y" >> ./.config
 # ftp工具
 echo "CONFIG_PACKAGE_luci-app-vsftpd=y" >> ./.config
 # 断网检测功能与定时重启
