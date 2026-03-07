@@ -88,13 +88,13 @@ echo "CONFIG_PACKAGE_luci-app-vsftpd=y" >> ./.config
 # 断网检测功能与定时重启
 echo "CONFIG_PACKAGE_luci-app-watchcat=y" >> ./.config
 # 下载工具
-echo "CONFIG_PACKAGE_luci-app-aria2=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-aria2=y" >> ./.config
 # Docker
-echo "CONFIG_PACKAGE_luci-app-docker=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-docker=y" >> ./.config
 # Passwall
-echo "CONFIG_PACKAGE_luci-app-passwall=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-passwall=y" >> ./.config
 # 微信推送
-echo "CONFIG_PACKAGE_luci-app-wechatpush=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-wechatpush=y" >> ./.config
 # 广告屏蔽大师Plus
 # echo "CONFIG_PACKAGE_luci-app-adbyby-plus=y" >> ./.config 
 # 强大的工具(需要添加源或git clone)
