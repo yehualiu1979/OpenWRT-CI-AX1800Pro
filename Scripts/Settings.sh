@@ -84,7 +84,7 @@ echo "CONFIG_PACKAGE_btop=y" >> ./.config
 # 多网盘存储
 #echo "CONFIG_PACKAGE_luci-app-alist=y" >> ./.config
 # ftp工具
-echo "CONFIG_PACKAGE_luci-app-vsftpd=y" >> ./.config
+#echo "CONFIG_PACKAGE_luci-app-vsftpd=y" >> ./.config
 # 断网检测功能与定时重启
 echo "CONFIG_PACKAGE_luci-app-watchcat=y" >> ./.config
 # 下载工具
