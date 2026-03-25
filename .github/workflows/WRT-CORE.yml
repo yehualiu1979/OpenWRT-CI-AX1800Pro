@@ -137,7 +137,7 @@ jobs:
           # 【优化】参考 test3-main：增大交换空间到 8GB，支持大内存需求
           swap-size-mb: 8192
           # 【优化】参考 test3-main：增加临时保留空间
-          temp-reserve-mb: 512
+          temp-reserve-mb: 0        # 设为 0，禁用 /mnt 分区
           # 【优化】参考 test3-main：减少根目录保留空间，释放更多空间
           root-reserve-mb: 512
           # 【新增】参考 test3-main：删除 .NET 组件，释放约 5-7GB 空间
