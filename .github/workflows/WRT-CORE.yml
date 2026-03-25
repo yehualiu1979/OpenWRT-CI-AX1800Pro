@@ -131,30 +131,34 @@ jobs:
 
 
           
-      - name: Combine Disks(合并磁盘)
-        uses: easimon/maximize-build-space@master
-        with:
-          # 【优化】参考 test3-main：增大交换空间到 8GB，支持大内存需求
-          swap-size-mb: 8192
-          # 【优化】参考 test3-main：增加临时保留空间
-          temp-reserve-mb: 0        # 设为 0，禁用 /mnt 分区
-          # 【优化】参考 test3-main：减少根目录保留空间，释放更多空间
-          root-reserve-mb: 512
-          # 【新增】参考 test3-main：删除 .NET 组件，释放约 5-7GB 空间
-          remove-dotnet: 'true'
-          # 【新增】参考 test3-main：删除 Android SDK，释放约 3-5GB 空间
-          remove-android: 'true'
-          # 【新增】参考 test3-main：删除 Haskell 工具链，释放约 2-3GB 空间
-          remove-haskell: 'true'
-          # 【新增】参考 test3-main：删除 Docker 镜像，释放约 5-10GB 空间
-          remove-docker-images: 'true'
-          # 【新增】删除 CodeQL 工具，释放约 2-3GB 空间
-          remove-codeql: 'true'
+      - name: Clean up and create swap(清理空间并创建交换空间)
+        run: |
+          echo "=== 清理不需要的软件释放空间 ==="
+          # 删除 .NET 组件，释放约 5-7GB 空间
+          sudo rm -rf /usr/share/dotnet
+          # 删除 Android SDK，释放约 3-5GB 空间
+          sudo rm -rf /usr/local/lib/android
+          # 删除 Haskell 工具链，释放约 2-3GB 空间
+          sudo rm -rf /opt/ghc
+          # 删除 CodeQL 工具，释放约 2-3GB 空间
+          sudo rm -rf /opt/hostedtoolcache/CodeQL
+          # 删除 Docker 镜像，释放约 5-10GB 空间
+          sudo docker image prune --all --force
+          echo "... 清理完成"
           
-          # 【原配置已注释】
-          # swap-size-mb: 2048
-          # temp-reserve-mb: 100
-          # root-reserve-mb: 2048
+          echo "=== 创建 8GB swap 文件 ==="
+          # 创建 swap 文件
+          sudo fallocate -l 8G /swapfile
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile
+          sudo swapon /swapfile
+          echo "... swap 创建完成"
+          
+          echo "=== 磁盘和内存信息 ==="
+          echo "磁盘空间："
+          df -h
+          echo "内存和交换空间："
+          free -h
 
       - name: Checkout Projects(拉取云编译仓库(本仓库)脚本)
         uses: actions/checkout@main
