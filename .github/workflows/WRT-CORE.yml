@@ -147,7 +147,10 @@ jobs:
           echo "... 清理完成"
           
           echo "=== 创建 8GB swap 文件 ==="
-          # 创建 swap 文件
+          # 先关闭现有的 swap 文件（如果存在）
+          sudo swapoff /swapfile 2>/dev/null || true
+          sudo rm -f /swapfile
+          # 创建新的 swap 文件
           sudo fallocate -l 8G /swapfile
           sudo chmod 600 /swapfile
           sudo mkswap /swapfile
