@@ -49,11 +49,11 @@ jobs:
       #默认主题
       WRT_THEME: argon
       #默认主机名
-      WRT_NAME: YhWrt
+      WRT_NAME: Yhl-Wrt
       #默认WIFI名称
-      WRT_SSID: ssid
+      WRT_SSID: Show-Time
       #默认WIFI密码
-      WRT_WORD: buyaowenwo
+      WRT_WORD: wobuxiaodemima
       #默认地址
       WRT_IP: 192.168.1.1
       #默认密码，仅作提示，修改无用
