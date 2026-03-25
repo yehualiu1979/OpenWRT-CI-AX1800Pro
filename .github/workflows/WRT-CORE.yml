@@ -139,7 +139,7 @@ jobs:
           # 【优化】参考 test3-main：增加临时保留空间
           temp-reserve-mb: 512
           # 【优化】参考 test3-main：减少根目录保留空间，释放更多空间
-          root-reserve-mb: 1024
+          root-reserve-mb: 512
           # 【新增】参考 test3-main：删除 .NET 组件，释放约 5-7GB 空间
           remove-dotnet: 'true'
           # 【新增】参考 test3-main：删除 Android SDK，释放约 3-5GB 空间
@@ -148,6 +148,8 @@ jobs:
           remove-haskell: 'true'
           # 【新增】参考 test3-main：删除 Docker 镜像，释放约 5-10GB 空间
           remove-docker-images: 'true'
+          # 【新增】删除 CodeQL 工具，释放约 2-3GB 空间
+          remove-codeql: 'true'
           
           # 【原配置已注释】
           # swap-size-mb: 2048
