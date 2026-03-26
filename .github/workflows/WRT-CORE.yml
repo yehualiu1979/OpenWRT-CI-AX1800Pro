@@ -365,20 +365,20 @@ jobs:
 
             find ./bin/targets/ -iregex ".*\(buildinfo\|json\|sha256sums\|packages\)$" -exec rm -rf {} +
 
-           # for FILE in $(find ./bin/targets/ -type f -iname "*$WRT_TARGET*") ; do
-           #   EXT=$(basename $FILE | cut -d '.' -f 2-)
-           #   NAME=$(basename $FILE | cut -d '.' -f 1 | grep -io "\($WRT_TARGET\).*")
-           #   NEW_FILE="$WRT_INFO"-"$NAME"-"$WRT_DATE"."$EXT"
-           #   mv -f $FILE ./upload/$NEW_FILE
-           # done
-
             for FILE in $(find ./bin/targets/ -type f -iname "*$WRT_TARGET*") ; do
               EXT=$(basename $FILE | cut -d '.' -f 2-)
-              NAME=$(basename $FILE | cut -d '.' -f 1 | grep -io "sysupgrade")  # 只提取 sysupgrade
-              DATE=$(echo "$WRT_DATE" | cut -d'-' -f1)  # 只保留日期部分
-              NEW_FILE="$WRT_INFO"-"$NAME"-"$DATE"."$EXT"
+              NAME=$(basename $FILE | cut -d '.' -f 1 | grep -io "\($WRT_TARGET\).*")
+              NEW_FILE="$WRT_INFO"-"$NAME"-"$WRT_DATE"."$EXT"
               mv -f $FILE ./upload/$NEW_FILE
             done
+
+            #for FILE in $(find ./bin/targets/ -type f -iname "*$WRT_TARGET*") ; do
+            #  EXT=$(basename $FILE | cut -d '.' -f 2-)
+            #  NAME=$(basename $FILE | cut -d '.' -f 1 | grep -io "sysupgrade")  # 只提取 sysupgrade
+            #  DATE=$(echo "$WRT_DATE" | cut -d'-' -f1)  # 只保留日期部分
+            #  NEW_FILE="$WRT_INFO"-"$NAME"-"$DATE"."$EXT"
+            #  mv -f $FILE ./upload/$NEW_FILE
+            #done
 
             find ./bin/targets/ -type f -exec mv -f {} ./upload/ \;
 
