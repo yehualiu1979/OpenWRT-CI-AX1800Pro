@@ -351,6 +351,8 @@ jobs:
 
       - name: Package Firmware(打包固件)
         run: |
+          #!/usr/bin/env bash
+          set -ex   # -e 表示遇到错误退出，-x 表示打印命令
           cd ./wrt/ && mkdir ./upload/
 
           cp -f ./.config ./upload/Config-"$WRT_CONFIG"-"$WRT_INFO"-"$WRT_DATE".txt
