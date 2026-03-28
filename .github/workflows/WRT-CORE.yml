@@ -274,6 +274,8 @@ jobs:
 
          # 清理临时目录
          rm -rf /tmp/bandix-temp
+         
+         echo "Bandix installation completed!"
 
       - name: Custom Packages(自定义软件包设置/更新)
         run: |
