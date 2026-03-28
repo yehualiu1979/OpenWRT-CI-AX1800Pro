@@ -265,7 +265,7 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-         #安装bandix（网络流量监控）
+          #安装bandix（网络流量监控）
          # 克隆整个仓库到临时目录
          git clone https://github.com/timsaya/luci-app-bandix.git /tmp/bandix-temp
 
