@@ -267,15 +267,15 @@ jobs:
 
           #安装bandix（网络流量监控）
          # 克隆整个仓库到临时目录
-         git clone https://github.com/timsaya/luci-app-bandix.git /tmp/bandix-temp
+          git clone https://github.com/timsaya/luci-app-bandix.git /tmp/bandix-temp
 
          # 然后移动实际的插件目录到目标位置
-         mv /tmp/bandix-temp/luci-app-bandix package/luci-app-bandix
+          mv /tmp/bandix-temp/luci-app-bandix package/luci-app-bandix
 
          # 清理临时目录
-         rm -rf /tmp/bandix-temp
+          rm -rf /tmp/bandix-temp
          
-         echo "Bandix installation completed!"
+          echo "Bandix installation completed!"
 
       - name: Custom Packages(自定义软件包设置/更新)
         run: |
