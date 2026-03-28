@@ -265,33 +265,24 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: 安装bandix（网络流量监控）（前端）
+      - name: 安装bandix（网络流量监控）
         run: |
           cd ./wrt/
-          # 克隆整个仓库到临时目录
+          # 克隆整个前端仓库到临时目录
           git clone https://github.com/timsaya/luci-app-bandix.git /tmp/bandix-temp
 
-          # 然后移动实际的插件目录到目标位置
+          # 移动实际的前端插件目录到目标位置
           mv /tmp/bandix-temp/luci-app-bandix package/luci-app-bandix
 
-          # 清理临时目录
-          rm -rf /tmp/bandix-temp
-          echo "Bandix installation completed!"
-
-      - name: 安装 Bandix（网络流量监控）（后端）
-        run: |
-           cd ./wrt/
-           
-           # 克隆整个仓库到临时目录
+           # 克隆整个后端仓库到临时目录
            git clone https://github.com/timsaya/openwrt-bandix.git /tmp/bandix-backend-temp
-          
-           # 然后移动实际的插件目录到目标位置
+
+           # 移动实际的后端插件目录到目标位置
            mv /tmp/bandix-backend-temp/openwrt-bandix package/openwrt-bandix
-   
-           # 清理临时目录
-           rm -rf /tmp/bandix-backend-temp
-   
-           echo "Bandix backend installation completed!"
+
+          # 清理临时目录
+          rm -rf /tmp/bandix-temp /tmp/bandix-backend-temp
+          echo "Bandix installation download!"
 
       - name: lucky安装包
         run: |
