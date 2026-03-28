@@ -119,6 +119,8 @@ echo "CONFIG_PACKAGE_luci-theme-kucat=n" >> ./.config
 
 # 可以让FinalShell查看文件列表并且ssh连上不会自动断开
 echo "CONFIG_PACKAGE_openssh-sftp-server=y" >> ./.config
+#安装bandix（网络流量监控）
+echo "CONFIG_PACKAGE_luci-app-bandix=y" >> ./.config
 # 解析、查询、操作和格式化 JSON 数据
 echo "CONFIG_PACKAGE_jq=y" >> ./.config
 # 简单明了的系统资源占用查看工具
