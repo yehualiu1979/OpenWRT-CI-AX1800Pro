@@ -132,7 +132,7 @@ echo "CONFIG_PACKAGE_btop=y" >> ./.config
 # ftp工具
 #echo "CONFIG_PACKAGE_luci-app-vsftpd=y" >> ./.config
 # 断网检测功能与定时重启
-echo "CONFIG_PACKAGE_luci-app-watchcat=y" >> ./.config
+#echo "CONFIG_PACKAGE_luci-app-watchcat=y" >> ./.config
 # 下载工具
 # echo "CONFIG_PACKAGE_luci-app-aria2=y" >> ./.config
 # Docker
@@ -151,8 +151,6 @@ echo "CONFIG_PACKAGE_curl=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-app-cpufreq=y" >> ./.config
 # Windows激活
 echo "CONFIG_PACKAGE_luci-app-vlmcsd=y" >> ./.config
-# 图形化流量监控
-echo "CONFIG_PACKAGE_luci-app-wrtbwmon=y" >> ./.config
 # turboacc
 # echo "CONFIG_PACKAGE_luci-app-turboacc=y" >> ./.config
 
